@@ -24,6 +24,8 @@ morgan(function (tokens, req, res) {
 
 const app = express();
 
+app.use(express.static('dist'));
+// used to make express show static content (Eg; the index.html page is going to be static, so...
 app.use(express.json());
 // used for post() because we send the data to be posted in json format, and this is express' built-in json parser.
 app.use(cors());
