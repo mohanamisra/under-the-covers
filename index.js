@@ -77,7 +77,7 @@ app.delete('/api/books/:id', (request, response) => {
         })
 })
 
-const PORT = 3001;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
     console.log('Server running successfully!\n VISIT AT http://localhost:3001/api/books')
 });
