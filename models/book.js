@@ -1,5 +1,6 @@
+require('dotenv').config();
 const mongoose = require('mongoose')
-const url = "mongodb+srv://lordmagic:1234@cluster0.z6jhhex.mongodb.net/?retryWrites=true&w=majority";
+const url = process.env.MONGODB_URI;
 mongoose.set('strictQuery',false)
 mongoose.connect(url)
 
